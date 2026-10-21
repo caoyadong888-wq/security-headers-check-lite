@@ -1,0 +1,24 @@
+{
+  "schema": "security-headers-check-lite/1",
+  "name": "lite-baseline",
+  "note": "Presence and exact allowed values only. No max-age floor and no CSP substring checks. Those are in the full checker. Confirm header values in MDN before you rely on this list.",
+  "rules": [
+    {
+      "id": "hsts",
+      "header": "Strict-Transport-Security",
+      "required": true
+    },
+    {
+      "id": "xfo",
+      "header": "X-Frame-Options",
+      "required": true,
+      "allowed_values": ["DENY", "SAMEORIGIN"]
+    },
+    {
+      "id": "xcto",
+      "header": "X-Content-Type-Options",
+      "required": true,
+      "allowed_values": ["nosniff"]
+    }
+  ]
+}
